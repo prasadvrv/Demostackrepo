@@ -1,0 +1,5 @@
+sudo docker stop hello-world
+sudo docker rm hello-world
+sudo docker rmi hello-world
+sudo docker build -t hello-world .
+sudo docker run -d --name hello-world -p 80:80 -v /var/lib/jenkins/workspace/demo/php/:/var/www/html hello-world
