@@ -5,3 +5,6 @@ pipeline {
             steps {
                 checkout scm
             }
+        }
+    }
+}    
