@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    triggers {
+         pollSCM('* * * * *')
+     }
     stages{
         stage('Checkout'){
             steps {
@@ -8,7 +11,7 @@ pipeline {
         }
         stage('Build'){
             steps {
-                sh 'sh ./demoscript'
+                sh 'sh demoscript'
             }
         }
     }
